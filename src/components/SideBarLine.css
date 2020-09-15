@@ -1,14 +1,30 @@
 .sidebar-line {
     display: block;
-    height: 53px;
     text-align: left;
 }
 
+.sidebar-line li {
+    height: 51px;
+    border-bottom: solid 2px rgb(228,228,228);;
+}
+
+.sidebar-line li .row p {
+    padding-top: 5px;
+    font-size: 12px;
+    margin:0;
+}
+
+.sidebar-line li .row small {
+    padding-top: 5px;
+    font-size: 10px;
+    margin: 0;
+}
+
 .sidebar-line .row {
-    padding-top: 2px;
+    /* padding-top: 2px; */
     display: flex;
     justify-content: space-between;
-    width:100%;
+    width: 100%;
 }
 
 .sidebar-line .col-1 {

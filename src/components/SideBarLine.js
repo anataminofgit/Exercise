@@ -5,10 +5,10 @@ import moment from "moment"
 const SideBarLine = (props) => {
 
     const { updated, location, type } = props;
-    let name = (props.name.length > 17) ?
-        props.name.slice(0, 17).concat("...") : props.name
+    let name = (props.name.length > 25) ?
+        props.name.slice(0, 25).concat("...") : props.name
 
-
+    console.log(location)
     return (
         <div className="sidebar-line">
             <li>
