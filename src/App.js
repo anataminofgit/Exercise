@@ -1,24 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import mydata from './data/sidebar.json';
+import SideBar from './components/SideBar';
+//  import axios from "axios"
 
 function App() {
+  const [data, setData] = React.useState(mydata);
+  const [showSidebar, setShowSidebar] = React.useState(true)
+
+
+
+  const handleOnclick = () => {
+    setShowSidebar(true)
+  }
+
+  
+  const handleClose = () => {
+    setShowSidebar(false)
+  }
+
+
+  const handleReload = (params) => {
+    
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>React App</h1>
+      { !showSidebar ? <button  onClick = {handleOnclick} type="button">Show SideBar</button> : null}
+      { showSidebar ? <SideBar data={data} onReload= {handleReload} onClose = {handleClose}/>: null}
+   
     </div>
   );
 }

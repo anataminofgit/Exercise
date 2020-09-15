@@ -1,0 +1,20 @@
+.sidebar-line {
+    display: block;
+    height: 53px;
+    text-align: left;
+}
+
+.sidebar-line .row {
+    padding-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
+
+.sidebar-line .col-1 {
+    width: 75%;
+}
+
+.sidebar-line .col-2 {
+    width: 25%;
+}
